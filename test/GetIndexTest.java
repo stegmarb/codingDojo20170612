@@ -14,6 +14,8 @@ public class GetIndexTest {
 
   Anagram anagram = new Anagram();
 
+  PrintFizzBuzz fB = new PrintFizzBuzz();
+
   @Before
   public void createList() {
     testList.add(1);
@@ -37,5 +39,15 @@ public class GetIndexTest {
     String secondString = "dcba";
 
     assertTrue(anagram.isAnagram(firstString, secondString));
+  }
+
+  @Test
+  public void testIsAnagramWhenLettersRepeating() {
+    assertFalse(anagram.isAnagram("aab", "abb"));
+  }
+
+  @Test
+  public void testFizzBuzz() {
+    assertEquals(fB.fizzBuzz.getNumberList(2), "Fizz");
   }
 }
