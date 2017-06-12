@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class PrintFizzBuzz {
-  List<String> list = new ArrayList<>(Arrays.asList("is it working", "or not", "Fizz"));
+  List<String> list = new ArrayList<>();
 
   public List<String> fizzBuzz(){
     for (int i = 1; i < 101; i++) {
@@ -19,6 +19,7 @@ public class PrintFizzBuzz {
         }
       }
     }
+    System.out.println(list);
     return list;
   }
 }
