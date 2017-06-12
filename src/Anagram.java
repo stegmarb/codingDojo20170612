@@ -1,16 +1,16 @@
+import java.util.Arrays;
+
 public class Anagram {
 
   public boolean isAnagram(String one, String two) {
-    int count = 0;
-    if (one.length() == two.length()) {
 
-      for (int i = 0; i < one.length(); ++i) {
-        if (two.contains(one.substring(i, i + 1))) {
-          count++;
-        }
-      }
-    }
-    if (count == one.length()) {
+    char[] oneCharArray = one.toCharArray();
+    Arrays.sort(oneCharArray);
+
+    char[] twoCharArray = two.toCharArray();
+    Arrays.sort(twoCharArray);
+
+    if(Arrays.toString(oneCharArray).equals(Arrays.toString(twoCharArray))) {
       return true;
     } else {
       return false;
