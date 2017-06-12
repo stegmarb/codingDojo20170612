@@ -10,10 +10,6 @@ public class Anagram {
     char[] twoCharArray = two.toCharArray();
     Arrays.sort(twoCharArray);
 
-    if(Arrays.toString(oneCharArray).equals(Arrays.toString(twoCharArray))) {
-      return true;
-    } else {
-      return false;
-    }
+    return Arrays.toString(oneCharArray).equals(Arrays.toString(twoCharArray));
   }
 }
