@@ -48,6 +48,6 @@ public class GetIndexTest {
 
   @Test
   public void testFizzBuzz() {
-    assertEquals(fB.fizzBuzz.getNumberList(2), "Fizz");
+    assertEquals(fB.fizzBuzz().get(2), "Fizz");
   }
 }
